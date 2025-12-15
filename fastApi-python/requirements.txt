@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+celery[redis]
+redis
+python-multipart
+pymupdf    # fitz
+pytesseract
+python-dotenv
+pydantic
+aiofiles
+regex

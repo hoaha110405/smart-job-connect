@@ -1,0 +1,6 @@
+{
+  "job_id": "7e8aeaa8-e375-435d-bfde-ec55a2e22edd",
+  "status": "error",
+  "error": "'\\n  \"avatarUrl\"'",
+  "traceback": "concurrent.futures.process._RemoteTraceback: \n\"\"\"\nTraceback (most recent call last):\n  File \"/usr/lib/python3.13/concurrent/futures/process.py\", line 254, in _process_worker\n    r = call_item.fn(*call_item.args, **call_item.kwargs)\n  File \"/home/hoa/workspace/project_cv/jobconnect-python/parser.py\", line 472, in parse_resume\n    llm_data = extract_with_gemini(raw_text)\n  File \"/home/hoa/workspace/project_cv/jobconnect-python/parser.py\", line 131, in extract_with_gemini\n    prompt = CV_STRICT_PROMPT_TEMPLATE.format(resume_text=text)\nKeyError: '\\n  \"avatarUrl\"'\n\"\"\"\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/hoa/workspace/project_cv/jobconnect-python/app.py\", line 39, in run_parse_in_executor\n    result = await loop.run_in_executor(executor, parse_resume, file_path)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: '\\n  \"avatarUrl\"'\n"
+}
