@@ -1,7 +1,8 @@
+
 import axios from "axios";
 
-// Update API_BASE_URL to the ngrok endpoint
-const API_BASE_URL = "https://diarchic-elanor-unsurrealistically.ngrok-free.dev";
+// Update API_BASE_URL to localhost for development
+const API_BASE_URL = "http://localhost:3000";
 
 console.log("🔗 API Base URL:", API_BASE_URL);
 
@@ -9,7 +10,7 @@ const api = axios.create({
   baseURL: API_BASE_URL,
   timeout: 30000,
   headers: {
-    // Bypass ngrok browser warning for free accounts
+    // Bypass ngrok browser warning for free accounts (kept for compatibility if switched back)
     "ngrok-skip-browser-warning": "true",
     "Bypass-Tunnel-Reminder": "true",
     "Content-Type": "application/json",
